@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #004225;
+}
+
+header {
+    background-color: #3C281E;
+    color: #d4bf79;
+    text-align: center;
+    padding: 1em 0;
+    border-style: solid;
+    border-width: thick;
+    border-color: #d4bf79;
+}
+
+footer {
+    background-color: #3C281E;
+    color: #d4bf79;
+    text-align: center;
+    padding: 1em 0;
+    border-style: solid;
+    border-width: thick;
+    border-color: #d4bf79;
+}
+
+section {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #3C281E;
+    border-style: solid;
+    border-width: thick;
+    border-color: #d4bf79;
+}
+
+h2 {
+    color: #d4bf79;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    color: #d4bf79;
+    text-align: center;
+}
+
+li {
+    margin-bottom: 20px;
+    color: #d4bf79;
+}
+
+.plant-box {
+    border: 1px solid #d4bf79;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.unavailable {
+    opacity: 0.5;
+    background: repeating-linear-gradient(45deg,
+            rgba(255, 255, 255, 0.1),
+            rgba(255, 255, 255, 0.1) 10px,
+            rgba(0, 0, 0, 0.1) 10px,
+            rgba(0, 0, 0, 0.1) 20px);
+}
+
+#product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+/* Info sections should match product boxes */
+.info-boxlet {
+    border: 1px solid #d4bf79;
+    /* Same thin gold border as product items */
+    border-radius: 8px;
+    /* Rounded corners */
+    padding: 10px;
+    background-color: #3C281E;
+    /* Consistent background */
+    color: #d4bf79;
+    /* Gold text */
+    text-align: center;
+}
+
+#info-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(800px, 1fr));
+    gap: 20px;
+    width: fit-content;
+    /* Ensures grid only takes necessary space */
+    margin: 0 auto;
+    /* Centers the grid */
+    justify-content: center;
+    /* Ensures items align in the center */
+}
