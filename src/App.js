@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './styles.css';
-import Header from './Header';
-import ProductList from './ProductList';
-import Order from './Order';
-import Footer from './Footer';
-import Info from './Info';
+import Header from './components/Header';
+import ProductList from './components/ProductList';
+import Order from './components/Order';
+import Footer from './components/Footer';
+import Info from './components/Info';
 
 function App() {
     const [selectedItems, setSelectedItems] = useState([]);
