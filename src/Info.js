@@ -12,7 +12,6 @@ function Info() {
                 <li>
                     <ContactDetails />
                 </li>
-
             </ul>
 
         </section>

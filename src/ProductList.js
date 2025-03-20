@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function ProductList() {
+function ProductList({ selectedItems, setSelectedItems }) {
     const [products] = useState([
         {
             name: 'Pereskiopsis sp.',
@@ -149,21 +149,39 @@ function ProductList() {
         // Add other products here...
     ]);
 
+    const toggleSelection = (product) => {
+        setSelectedItems(prevItems => {
+            const isSelected = prevItems.some(item => item.name === product.name);
+
+            if (isSelected) {
+                return prevItems.filter(item => item.name !== product.name);
+            } else {
+                return [...prevItems, product];
+            }
+        });
+    };
+
     return (
         <section>
             <h2>Items for Sale</h2>
             <ul id="product-list">
                 {products.map((product, index) => (
                     <li key={index} className={`plant-box ${product.availability}`}>
-                        <h3>{product.name}</h3>
-                        <p className={`availability ${product.availability}`}>{product.availability.toUpperCase()}</p>
-                        <a href={product.fullImage} target="_blank" rel="noopener noreferrer">
-                            <img src={product.image} alt={product.name} className="product-image thumbnail" />
-                        </a>
-                        <p>{product.description}</p>
-                        <p>{product.size}</p>
-                        <p>{product.price}</p>
-                    </li>
+                    <input 
+                        type="checkbox" 
+                        onChange={() => toggleSelection(product)} 
+                        checked={selectedItems.some(item => item.name === product.name)}
+                        disabled={product.availability !== 'available'} // Disable checkbox for unavailable items
+                    />
+                    <h3>{product.name}</h3>
+                    <p className={`availability ${product.availability}`}>{product.availability.toUpperCase()}</p>
+                    <a href={product.fullImage} target="_blank" rel="noopener noreferrer">
+                        <img src={product.image} alt={product.name} className="product-image thumbnail" />
+                    </a>
+                    <p>{product.description}</p>
+                    <p>{product.size}</p>
+                    <p>{product.price}</p>
+                </li>
                 ))}
             </ul>
         </section>
