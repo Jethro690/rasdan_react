@@ -9,21 +9,21 @@ function Footer() {
         <footer style={{ textAlign: 'center', padding: '20px' }}>
             <p>Have a plant-tastic day 😊🌵</p>
             <p>
-                <a 
-                    href="#" 
-                    onClick={(e) => {
-                        e.preventDefault(); // Prevents jumping to top instantly
-                        scrollToTop();
-                    }} 
+                <button 
+                    onClick={scrollToTop}
                     style={{ 
+                        background: 'none',
+                        border: 'none',
                         color: '#d4bf79', /* Gold color */
-                        textDecoration: 'none',
+                        textDecoration: 'underline',
                         fontWeight: 'bold',
-                        cursor: 'pointer'
+                        cursor: 'pointer',
+                        fontSize: 'inherit',
+                        padding: 0
                     }}
                 >
                     Return to Top ⬆️
-                </a>
+                </button>
             </p>
         </footer>
     );
