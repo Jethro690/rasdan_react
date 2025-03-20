@@ -21,7 +21,7 @@ const products = [
         name: 'G. bruchii, grafted',
         image: './thumb-images/croucheri.jpg',
         fullImage: './images/croucheri.jpg',
-        description: 'Gymnocalycium bruchii s a miniature clumping succulent that clusters when small. This species is very variable. It is a summer grower species that is easy to cultivate. It is one of the most cold-tolerant South American species. It can grow outdoors and is hardy to -15° C or even less.',
+        description: 'Gymnocalycium bruchii is a miniature clumping succulent that clusters when small. This species is very variable. It is a summer grower species that is easy to cultivate. It is one of the most cold-tolerant South American species. It can grow outdoors and is hardy to -15° C or even less.',
         size: '3 cm scion',
         price: 'R 75',
         availability: 'available'
