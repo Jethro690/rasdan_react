@@ -59,6 +59,14 @@ li {
     padding: 10px;
     border-radius: 8px;
     background-color: #352412;
+    position: relative;
+}
+
+.plant-box input[type="checkbox"] {
+    position: absolute;
+    top: 10px; /* Adjust distance from the bottom */
+    right: 10px; /* Adjust distance from the right */
+    transform: scale(1.5); /* Optional: scales up the checkbox for better visibility */
 }
 
 a {

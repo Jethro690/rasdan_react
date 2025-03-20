@@ -8,7 +8,7 @@ function HowItWorks() {
             <ul>
                 <li>Have a look at what's available on this page. See what you like?</li>
                 <li>Looking for a better picture of an item? Questions?</li>
-                <li>Message me on WhatsApp or Instagram. Then we can set up an invoice and PUDO. 🥰</li>
+                <li>Message me on WhatsApp or Instagram. Then we can set up an invoice and<a href="https://www.pudo.co.za/show-me-the-moola.php" target="_blank" rel="noopener noreferrer"> PUDO</a>. 🥰</li>
                 <li>Get your pull!</li>
                 <li>🇿🇦 South Africa only 🇿🇦</li>
             </ul>
