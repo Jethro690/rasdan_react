@@ -3,7 +3,7 @@ const products = [
         name: 'Pereskiopsis sp.',
         image: './thumb-images/williamsii.jpg',
         fullImage: './images/williamsii.jpg',
-        description: 'Grafting stock, suitible for small scieons such as seedlings',
+        description: 'Grafting stock, suitible for small scions such as seedlings',
         size: '10 * 10 cm unrooted cutting',
         price: 'R 50',
         availability: 'available'
