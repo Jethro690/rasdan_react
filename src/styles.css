@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: #3C281E;
+    background-color: #352412;
     color: #d4bf79;
     text-align: center;
     padding: 1em 0;
@@ -16,7 +16,7 @@ header {
 }
 
 footer {
-    background-color: #3C281E;
+    background-color: #352412;
     color: #d4bf79;
     text-align: center;
     padding: 1em 0;
@@ -31,7 +31,7 @@ section {
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #3C281E;
+    background-color: #352412;
     border-style: solid;
     border-width: thick;
     border-color: #d4bf79;
@@ -58,7 +58,7 @@ li {
     border: 1px solid #d4bf79;
     padding: 10px;
     border-radius: 8px;
-    background-color: #3C281E;
+    background-color: #352412;
 }
 
 a {
@@ -99,7 +99,7 @@ img {
     border-radius: 8px;
     /* Rounded corners */
     padding: 10px;
-    background-color: #3C281E;
+    background-color: #352412;
     /* Consistent background */
     color: #d4bf79;
     /* Gold text */
@@ -118,7 +118,29 @@ img {
     /* Ensures items align in the center */
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Very Small devices (portrait tablets and large phones, 150px and up) */
+@media only screen and (min-width: 200px) {
+    #info-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+    section {
+        max-width: 200px;
+        background-color: #123524;
+    }
+} 
+
+/* Special order */
+@media only screen and (min-width: 374px) {
+    #info-list {
+        grid-template-columns: repeat(auto-fill, minmax(274px, 1fr));
+    }
+    section {
+        max-width: 374px;
+        background-color: #123524;
+    }
+} 
+
+/* Small devices */
 @media only screen and (min-width: 610px) {
     #info-list {
         grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
@@ -129,14 +151,14 @@ img {
     }
 } 
 
-/* Medium devices (landscape tablets, 768px and up) */
+/* Medium devices*/
 @media only screen and (min-width: 800px) {
     #info-list {
         grid-template-columns: repeat(auto-fill, minmax(700px, 1fr));
     }
     section {
         max-width: 700px;
-        background-color: #3C281E;
+        background-color: #352412;
     }
 }
 
@@ -147,28 +169,28 @@ img {
     }
     section {
         max-width: 950px;
-        background-color: #3C281E;
+        background-color: #352412;
     }
 }
 
-/* Large devices (laptops/desktops, 1650px and up) */
+/* Large devices*/
 @media only screen and (min-width: 1650px) {
     #info-list {
         grid-template-columns: repeat(auto-fill, minmax(1200px, 1fr));
     }
     section {
         max-width: 1200px;
-        background-color: #3C281E;
+        background-color: #352412;
     }
 } 
 
-/* Extra large devices (large laptops and desktops, 1920px and up) */
+/* Extra large devices*/
 @media only screen and (min-width: 1920px) {
     #info-list {
         grid-template-columns: repeat(auto-fill, minmax(1500px, 1fr));
     }
     section {
         max-width: 1500px;
-        background-color: #3C281E;
+        background-color: #352412;
     }
 }
