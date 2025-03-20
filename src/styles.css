@@ -59,7 +59,7 @@ li {
     padding: 10px;
     border-radius: 8px;
     background-color: #352412;
-    position: relative;
+    position: relative; /* Make sure this is in place */
 }
 
 .plant-box input[type="checkbox"] {
@@ -83,6 +83,31 @@ img {
     height: auto;
     display: block;
     margin: 0 auto;
+}
+
+.urgency-banner {
+    position: absolute;
+    top: 45px; /* Adjust the vertical position as needed */
+    left: -30px; /* Adjust the horizontal position as needed */
+    background-color: #241235;
+    color: white;
+    font-weight: bold;
+    padding: 5px 15px;
+    transform: rotate(-45deg); /* Rotate the banner 45 degrees */
+    transform-origin: top left; /* Make sure the rotation starts from the top-left corner */
+    z-index: 2;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Adjust positioning if necessary */
+.urgency-1 {
+    background: red;
+    color: white;
+}
+
+.urgency-2 {
+    background: orange;
+    color: white;
 }
 
 .unavailable {
