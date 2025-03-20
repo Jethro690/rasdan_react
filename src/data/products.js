@@ -3,8 +3,8 @@ const products = [
         name: 'Pereskiopsis sp.',
         image: './thumb-images/williamsii.jpg',
         fullImage: './images/williamsii.jpg',
-        description: 'Grafting stock',
-        size: '10 X 10 cm unrooted cutting',
+        description: 'Grafting stock, suitible for small scions such as seedlings',
+        size: '10 * 10 cm unrooted cutting',
         price: 'R 50',
         availability: 'available'
     },
@@ -12,18 +12,18 @@ const products = [
         name: 'H. coladamononis, grafted',
         image: './thumb-images/croucheri.jpg',
         fullImage: './images/croucheri.jpg',
-        description: 'Meet the captivating Monkey`s Tail Cactus, scientifically known as Cleistocactus winteri. Native to the high-altitude regions of South America, this succulent marvel boasts long, trailing stems adorned with clusters of spines resembling a playful monkey`s tail.',
-        size: 'Various lengths cutting',
-        price: 'R 120 / 10 cm',
+        description: 'Meet the captivating Monkey`s Tail Cactus. Native to the high-altitude regions of South America, this succulent marvel boasts long, trailing stems adorned with clusters of spines resembling a playful monkey`s tail.',
+        size: '2 cm scion',
+        price: 'R 120',
         availability: 'unavailable'
     },
     {
         name: 'G. bruchii, grafted',
         image: './thumb-images/croucheri.jpg',
         fullImage: './images/croucheri.jpg',
-        description: 'Gymnocalycium bruchii s a miniature clumping succulent that clusters when small. This species is very variable. It is a summer grower species that is easy to cultivate. It is one of the most cold-tolerant South American species. It can grow outdoors and is hardy to -15° C or even less.',
+        description: 'Gymnocalycium bruchii is a miniature clumping succulent that clusters when small. This species is very variable. It is a summer grower species that is easy to cultivate. It is one of the most cold-tolerant South American species. It can grow outdoors and is hardy to -15° C or even less.',
         size: '3 cm scion',
-        price: 'R 80',
+        price: 'R 75',
         availability: 'available'
     },
     {
@@ -31,8 +31,8 @@ const products = [
         image: './thumb-images/croucheri.jpg',
         fullImage: './images/croucheri.jpg',
         description: 'Mother-in-law`s cushion, is a species of barrel cactus which is endemic to east-central Mexico. It is rare and endangered in the wild, where it is found near Mesa de León in the state of Querétaro, and in the state of Hidalgo.',
-        size: '5 cm scion',
-        price: 'R 30',
+        size: '4 cm scion',
+        price: 'R 40',
         availability: 'available'
     },
     {
@@ -95,14 +95,14 @@ const products = [
         fullImage: './images/croucheri.jpg',
         description: 'Lophophora jourdaniana, with pale flower where normally it is a deep pink, is a small, spineless cactus native to the southwestern regions of North America, particularly in Mexico and parts of Texas. The plant has a distinctive appearance, characterized by its rounded, button-like shape, usually greenish-gray or bluish-green in color.',
         size: '3.5 cm scion',
-        price: 'R 150',
+        price: 'R 200',
         availability: 'available'
     },
     {
         name: 'H. coladamononis',
         image: './thumb-images/croucheri.jpg',
         fullImage: './images/croucheri.jpg',
-        description: 'A rare, spherical cactus with beautiful golden spines. Prefers well-draining soil and partial sunlight.',
+        description: 'Meet the captivating Monkey`s Tail Cactus. Native to the high-altitude regions of South America, this succulent marvel boasts long, trailing stems adorned with clusters of spines resembling a playful monkey`s tail.',
         size: 'Various lengths cutting, rooted',
         price: 'R 120 / 10 cm',
         availability: 'available'
@@ -111,25 +111,25 @@ const products = [
         name: 'T. bridgesii "monstrose short form"',
         image: './thumb-images/croucheri.jpg',
         fullImage: './images/croucheri.jpg',
-        description: 'A rare, spherical cactus with beautiful golden spines. Prefers well-draining soil and partial sunlight.',
-        size: '3.5 cm scion',
-        price: 'R 120',
+        description: 'Trichocereus bridgesii Monstrose "Short Form" – a rare, fast-growing mutant cactus with unique knobby, sculptural stems. Perfect for collectors seeking an eye-catching, low-maintenance addition to their succulent collection!',
+        size: '6 cm cutting, unrooted',
+        price: 'R 40',
         availability: 'available'
     },
     {
         name: 'T. bridgesii "monstrose long form"',
         image: './thumb-images/croucheri.jpg',
         fullImage: './images/croucheri.jpg',
-        description: 'A rare, spherical cactus with beautiful golden spines. Prefers well-draining soil and partial sunlight.',
-        size: '3.5 cm scion',
-        price: 'R 120',
+        description: 'Trichocereus bridgesii Monstrose "Long Form" – a rare and fast-growing cactus with elongated, knobby stems that create a striking, sculptural appearance. A must-have for collectors seeking something truly unique!',
+        size: '12 cm cutting, unrooted',
+        price: 'R 160',
         availability: 'unavailable'
     },
     {
         name: 'P. aseliformis crested, grafted',
         image: './thumb-images/croucheri.jpg',
         fullImage: './images/croucheri.jpg',
-        description: '',
+        description: 'Pelecyphora aselliformis Crested – a rare and slow-growing gem with beautifully contorted, fan-like growth. Ideal for collectors who appreciate unique, sculptural succulents!',
         size: '2 cm scion',
         price: 'R 600',
         availability: 'unavailable'
@@ -139,8 +139,8 @@ const products = [
         image: './thumb-images/croucheri.jpg',
         fullImage: './images/croucheri.jpg',
         description: 'An indigenous South African succulent plant with a rich cultural history. Also known as Kanna, this fascinating herb has been traditionally used for its mood-enhancing properties.',
-        size: '3.5 cm scion',
-        price: 'R 120',
+        size: '5 * 5 cm cuttings',
+        price: 'R 50',
         availability: 'available'
     },
     // Add other products here...
