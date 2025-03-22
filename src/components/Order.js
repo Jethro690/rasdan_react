@@ -1,17 +1,20 @@
 import React, { useState } from 'react';
 
-function Order({ selectedItems }) {
+function Order({ selectedItems, quantities }) {
     const [customerLocation, setCustomerLocation] = useState('');
-
     const PUDO_COST = 109; // Set the PUDO shipping cost
 
     const handleLocationChange = (event) => {
         setCustomerLocation(event.target.value);
     };
 
-    // Function to calculate total price of selected items
+    // Function to calculate total price of selected items with quantities
     const calculateTotalPrice = () => {
-        const total = selectedItems.reduce((sum, item) => sum + parseFloat(item.price.replace('R', '')), 0);
+        const total = selectedItems.reduce((sum, item) => {
+            const quantity = quantities[item.name] || 1;
+            return sum + (parseFloat(item.price.replace('R', '')) * quantity);
+        }, 0);
+
         return total + (customerLocation ? PUDO_COST : 0); // Add PUDO cost if location is entered
     };
 
@@ -20,7 +23,11 @@ function Order({ selectedItems }) {
             return "I'm interested in purchasing some plants. Please let me know what’s available.";
         }
 
-        const itemList = selectedItems.map(item => `${item.name} - ${item.price}`).join('\n');
+        const itemList = selectedItems.map(item => {
+            const quantity = quantities[item.name] || 1;
+            return `${quantity} * ${item.name} - ${item.price}`;
+        }).join('\n');
+
         const locationText = customerLocation ? `I'm based in ${customerLocation}, and I want the following:\n` : "I want the following:\n";
         const shippingText = customerLocation ? `\nShipping via PUDO: R${PUDO_COST}` : '';
 
@@ -36,7 +43,9 @@ function Order({ selectedItems }) {
                 <div className='info-boxlet'>
                     <ul>
                         {selectedItems.map((item, index) => (
-                            <li key={index}>{item.name} - {item.price}</li>
+                            <li key={index}>
+                                {quantities[item.name] || 1} * {item.name} - {item.price}
+                            </li>
                         ))}
                     </ul>
                 </div>
