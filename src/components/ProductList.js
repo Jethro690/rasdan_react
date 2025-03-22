@@ -15,10 +15,12 @@ function ProductList({ selectedItems, setSelectedItems }) {
         });
     };
 
-    const sortedProducts = [...products].sort((a, b) => {
-        return a.availability === 'available' && b.availability !== 'available' ? -1 :
-            a.availability !== 'available' && b.availability === 'available' ? 1 : 0;
-    });
+    const sortedProducts = [...products]
+        .filter(product => product.visible) // 🚀 Filter out hidden products
+        .sort((a, b) => {
+            return a.availability === 'available' && b.availability !== 'available' ? -1 :
+                a.availability !== 'available' && b.availability === 'available' ? 1 : 0;
+        });
 
     return (
         <section>
