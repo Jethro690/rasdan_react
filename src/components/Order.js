@@ -3,8 +3,16 @@ import React, { useState } from 'react';
 function Order({ selectedItems }) {
     const [customerLocation, setCustomerLocation] = useState('');
 
+    const PUDO_COST = 109; // Set the PUDO shipping cost
+
     const handleLocationChange = (event) => {
         setCustomerLocation(event.target.value);
+    };
+
+    // Function to calculate total price of selected items
+    const calculateTotalPrice = () => {
+        const total = selectedItems.reduce((sum, item) => sum + parseFloat(item.price.replace('R', '')), 0);
+        return total + (customerLocation ? PUDO_COST : 0); // Add PUDO cost if location is entered
     };
 
     const formatWhatsAppMessage = () => {
@@ -14,8 +22,9 @@ function Order({ selectedItems }) {
 
         const itemList = selectedItems.map(item => `${item.name} - ${item.price}`).join('\n');
         const locationText = customerLocation ? `I'm based in ${customerLocation}, and I want the following:\n` : "I want the following:\n";
-        
-        return `${locationText}${itemList}`;
+        const shippingText = customerLocation ? `\nShipping via PUDO: R${PUDO_COST}` : '';
+
+        return `${locationText}${itemList}${shippingText}\nTotal Price: R${calculateTotalPrice()}`;
     };
 
     const whatsappLink = `https://wa.me/27643201946?text=${encodeURIComponent(formatWhatsAppMessage())}`;
@@ -35,8 +44,10 @@ function Order({ selectedItems }) {
                 <div className='info-boxlet'>No items selected*</div>
             )}
 
-            {/* Centered Input Section */}
-            <li>
+            {/* Total Price Display */}
+            <p className="total-price">Total Price: R{calculateTotalPrice()}</p>
+
+            {/* Location Input */}
             <div className="input-container">
                 <input
                     type="text"
@@ -46,20 +57,14 @@ function Order({ selectedItems }) {
                     placeholder="Enter nearest PUDO Locker"
                 />
             </div>
-            </li>
 
+            {/* Order Buttons */}
             <ul className="button-container">
                 <li>
                     <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
                         Order via WhatsApp 📱
                     </a>
                 </li>
-                {/* WIP: Fix instagram message problem                
-                <li>
-                    <a href="https://www.instagram.com/rasdan_69" target="_blank" rel="noopener noreferrer">
-                        Order via Instagram 🌐
-                    </a>
-                </li> */}
             </ul>
         </section>
     );
