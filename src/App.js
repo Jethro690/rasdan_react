@@ -8,13 +8,22 @@ import Info from './components/Info';
 
 function App() {
     const [selectedItems, setSelectedItems] = useState([]);
+    const [quantities, setQuantities] = useState({}); // Add quantities state
+
     return (
         <div>
             <Header />
             <Info />
-            {/* Pass selectedItems and setSelectedItems to ProductList */}
-            <ProductList selectedItems={selectedItems} setSelectedItems={setSelectedItems} />
-            <Order selectedItems={selectedItems} />
+            <ProductList
+                selectedItems={selectedItems}
+                setSelectedItems={setSelectedItems}
+                quantities={quantities} // Pass quantities to ProductList
+                setQuantities={setQuantities} // Pass setQuantities to ProductList
+            />
+            <Order
+                selectedItems={selectedItems}
+                quantities={quantities} // Pass quantities to Order
+            />
             <Footer />
         </div>
     );
