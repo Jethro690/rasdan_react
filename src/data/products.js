@@ -7,7 +7,8 @@ const products = [
         size: '10 * 10 cm unrooted cutting',
         price: 'R 50',
         availability: 'available',
-        urgencyLevel: 0
+        urgencyLevel: 0,
+        visible: true
     },
     {
         name: 'H. coladamononis, grafted',
@@ -17,7 +18,8 @@ const products = [
         size: '2 cm scion',
         price: 'R 120',
         availability: 'unavailable',
-        urgencyLevel: 0
+        urgencyLevel: 0,
+        visible: true
     },
     {
         name: 'G. bruchii, grafted',
@@ -27,7 +29,8 @@ const products = [
         size: '3 cm scion',
         price: 'R 75',
         availability: 'available',
-        urgencyLevel: 0
+        urgencyLevel: 0,
+        visible: true
     },
     {
         name: 'E. grusonii, grafted',
@@ -37,7 +40,8 @@ const products = [
         size: '4 cm scion',
         price: 'R 40',
         availability: 'available',
-        urgencyLevel: 0
+        urgencyLevel: 0,
+        visible: true
     },
     {
         name: 'L. williamsii "caespitosa", grafted',
@@ -47,7 +51,8 @@ const products = [
         size: '5 cm scion, multiple heads',
         price: 'R 120',
         availability: 'unavailable',
-        urgencyLevel: 0
+        urgencyLevel: 0,
+        visible: true
     },
     {
         name: 'S. heinzii, grafted',
@@ -57,7 +62,8 @@ const products = [
         size: '3 cm scion',
         price: 'R 75',
         availability: 'available',
-        urgencyLevel: 0
+        urgencyLevel: 0,
+        visible: true
     },
     {
         name: 'L. jourdaniana',
@@ -67,7 +73,8 @@ const products = [
         size: '3.5 cm scion',
         price: 'R 150',
         availability: 'available',
-        urgencyLevel: 0
+        urgencyLevel: 0,
+        visible: true
     },
     {
         name: 'L. williamsii, grafted',
@@ -77,7 +84,8 @@ const products = [
         size: '3 cm scion',
         price: 'R 100',
         availability: 'available',
-        urgencyLevel: 0
+        urgencyLevel: 0,
+        visible: true
     },
     {
         name: 'S. divinorum',
@@ -87,7 +95,8 @@ const products = [
         size: '15 cm cuting, sold in pot',
         price: 'R 50',
         availability: 'available',
-        urgencyLevel: 0
+        urgencyLevel: 0,
+        visible: true
     },
     {
         name: 'M. speciosa, "Red vein"',
@@ -97,7 +106,8 @@ const products = [
         size: '15 cm cutting, sold in bag',
         price: 'R 400',
         availability: 'unavailable',
-        urgencyLevel: 2
+        urgencyLevel: 2,
+        visible: true
     },
     {
         name: 'L. jourdaniana "pale flower", grafted',
@@ -107,7 +117,8 @@ const products = [
         size: '3.5 cm scion',
         price: 'R 200',
         availability: 'unavailable',
-        urgencyLevel: 2
+        urgencyLevel: 2,
+        visible: true
     },
     {
         name: 'H. coladamononis',
@@ -117,7 +128,8 @@ const products = [
         size: 'Various lengths cutting, rooted',
         price: 'R 120 / 10 cm',
         availability: 'available',
-        urgencyLevel: 2
+        urgencyLevel: 2,
+        visible: true
     },
     {
         name: 'T. bridgesii "monstrose short form"',
@@ -127,7 +139,8 @@ const products = [
         size: '6 cm cutting, unrooted',
         price: 'R 40',
         availability: 'available',
-        urgencyLevel: 0
+        urgencyLevel: 0,
+        visible: true
     },
     {
         name: 'T. bridgesii "monstrose long form"',
@@ -137,7 +150,8 @@ const products = [
         size: '12 cm cutting, unrooted',
         price: 'R 160',
         availability: 'unavailable',
-        urgencyLevel: 0
+        urgencyLevel: 0,
+        visible: true
     },
     {
         name: 'P. aseliformis crested, grafted',
@@ -147,7 +161,8 @@ const products = [
         size: '2 cm scion',
         price: 'R 600',
         availability: 'unavailable',
-        urgencyLevel: 1
+        urgencyLevel: 1,
+        visible: true
     },
     {
         name: 'S. tortuosum',
@@ -157,7 +172,8 @@ const products = [
         size: '3 * 10 cm cuttings',
         price: 'R 30',
         availability: 'available',
-        urgencyLevel: 0
+        urgencyLevel: 0,
+        visible: true
     },
     // Add other products here...
 ];
