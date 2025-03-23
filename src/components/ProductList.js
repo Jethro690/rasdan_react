@@ -19,7 +19,7 @@ function ProductList({ selectedItems, setSelectedItems, quantities, setQuantitie
     const toggleSelection = (product) => {
         setSelectedItems(prevItems => {
             const isSelected = prevItems.some(item => item.name === product.name);
-
+    
             if (isSelected) {
                 // If unchecked, remove from selected items and delete from quantities
                 setQuantities(prev => {
@@ -29,17 +29,20 @@ function ProductList({ selectedItems, setSelectedItems, quantities, setQuantitie
                 });
                 return prevItems.filter(item => item.name !== product.name);
             } else {
-                // If checked, add to selected items and set default quantity to 1
-                setQuantities(prev => ({ ...prev, [product.name]: 1 }));
+                // If checked, add to selected items and set quantity to maxQuantity (or 1 if maxQuantity is missing)
+                const defaultQuantity = Math.min(1, product.maxQuantity || 1); // 👈 Ensure quantity is within limit
+                setQuantities(prev => ({ ...prev, [product.name]: defaultQuantity }));
                 return [...prevItems, product];
             }
         });
-    };
+    };    
 
     const updateQuantity = (product, quantity) => {
-        if (quantity < 1) return;
+        if (quantity < 1) return; // Prevent selecting below 1
+        if (quantity > product.maxQuantity) quantity = product.maxQuantity; // 👈 Ensure it doesn't exceed the max
+    
         setQuantities(prev => ({ ...prev, [product.name]: quantity }));
-    };
+    };    
 
     const sortedProducts = [...products]
         .filter(product => product.visible) // Hide invisible items
@@ -70,11 +73,11 @@ function ProductList({ selectedItems, setSelectedItems, quantities, setQuantitie
                         <h3>{product.name}</h3>
                         <p className={`availability ${product.availability}`}>{product.availability.toUpperCase()}</p>
                         <img
-    src={product.image}
-    alt={product.name}
-    className="product-image thumbnail"
-    onClick={() => openModal(product)} // Clicking the image opens the modal
-/>
+                            src={product.image}
+                            alt={product.name}
+                            className="product-image thumbnail"
+                            onClick={() => openModal(product)} // Clicking the image opens the modal
+                        />
                         <p>{product.description}</p>
                         <p>{product.size}</p>
                         <p>{product.price}</p>

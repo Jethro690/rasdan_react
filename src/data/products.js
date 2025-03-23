@@ -8,7 +8,8 @@ const products = [
         price: 'R 50',
         availability: 'available',
         urgencyLevel: 0,
-        visible: true
+        visible: true,
+        maxQuantity: 3
     },
     {
         name: 'H. coladamononis, grafted',
@@ -19,7 +20,8 @@ const products = [
         price: 'R 120',
         availability: 'unavailable',
         urgencyLevel: 0,
-        visible: true
+        visible: true,
+        maxQuantity: 3
     },
     {
         name: 'G. bruchii, grafted',
@@ -30,7 +32,8 @@ const products = [
         price: 'R 75',
         availability: 'available',
         urgencyLevel: 0,
-        visible: true
+        visible: true,
+        maxQuantity: 3
     },
     {
         name: 'E. grusonii, grafted',
@@ -41,7 +44,8 @@ const products = [
         price: 'R 40',
         availability: 'available',
         urgencyLevel: 0,
-        visible: true
+        visible: true,
+        maxQuantity: 3
     },
     {
         name: 'L. williamsii "caespitosa", grafted',
@@ -52,7 +56,8 @@ const products = [
         price: 'R 120',
         availability: 'unavailable',
         urgencyLevel: 0,
-        visible: true
+        visible: true,
+        maxQuantity: 3
     },
     {
         name: 'S. heinzii, grafted',
@@ -63,7 +68,8 @@ const products = [
         price: 'R 75',
         availability: 'available',
         urgencyLevel: 0,
-        visible: true
+        visible: true,
+        maxQuantity: 3
     },
     {
         name: 'L. jourdaniana',
@@ -74,7 +80,8 @@ const products = [
         price: 'R 150',
         availability: 'available',
         urgencyLevel: 0,
-        visible: true
+        visible: true,
+        maxQuantity: 3
     },
     {
         name: 'L. williamsii, grafted',
@@ -85,7 +92,8 @@ const products = [
         price: 'R 100',
         availability: 'available',
         urgencyLevel: 0,
-        visible: true
+        visible: true,
+        maxQuantity: 3
     },
     {
         name: 'S. divinorum',
@@ -96,7 +104,8 @@ const products = [
         price: 'R 50',
         availability: 'available',
         urgencyLevel: 0,
-        visible: true
+        visible: true,
+        maxQuantity: 3
     },
     {
         name: 'M. speciosa, "Red vein"',
@@ -107,7 +116,8 @@ const products = [
         price: 'R 400',
         availability: 'unavailable',
         urgencyLevel: 2,
-        visible: true
+        visible: true,
+        maxQuantity: 2
     },
     {
         name: 'L. jourdaniana "pale flower", grafted',
@@ -118,7 +128,8 @@ const products = [
         price: 'R 200',
         availability: 'unavailable',
         urgencyLevel: 2,
-        visible: true
+        visible: true,
+        maxQuantity: 2
     },
     {
         name: 'H. coladamononis',
@@ -129,7 +140,8 @@ const products = [
         price: 'R 120 / 10 cm',
         availability: 'available',
         urgencyLevel: 2,
-        visible: true
+        visible: true,
+        maxQuantity: 2
     },
     {
         name: 'T. bridgesii "monstrose short form"',
@@ -140,7 +152,8 @@ const products = [
         price: 'R 40',
         availability: 'available',
         urgencyLevel: 0,
-        visible: true
+        visible: true,
+        maxQuantity: 3
     },
     {
         name: 'T. bridgesii "monstrose long form"',
@@ -151,7 +164,8 @@ const products = [
         price: 'R 160',
         availability: 'unavailable',
         urgencyLevel: 0,
-        visible: true
+        visible: true,
+        maxQuantity: 3
     },
     {
         name: 'P. aseliformis crested, grafted',
@@ -162,7 +176,8 @@ const products = [
         price: 'R 600',
         availability: 'unavailable',
         urgencyLevel: 1,
-        visible: true
+        visible: true,
+        maxQuantity: 1
     },
     {
         name: 'S. tortuosum',
@@ -173,7 +188,8 @@ const products = [
         price: 'R 30',
         availability: 'available',
         urgencyLevel: 0,
-        visible: true
+        visible: true,
+        maxQuantity: 3
     },
     // Add other products here...
 ];
