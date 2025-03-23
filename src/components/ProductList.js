@@ -20,7 +20,7 @@ function ProductList({ selectedItems, setSelectedItems, quantities, setQuantitie
     const toggleSelection = (product) => {
         setSelectedItems(prevItems => {
             const isSelected = prevItems.some(item => item.name === product.name);
-    
+
             if (isSelected) {
                 // If unchecked, remove from selected items and delete from quantities
                 setQuantities(prev => {
@@ -36,14 +36,14 @@ function ProductList({ selectedItems, setSelectedItems, quantities, setQuantitie
                 return [...prevItems, product];
             }
         });
-    };    
+    };
 
     const updateQuantity = (product, quantity) => {
         if (quantity < 1) return; // Prevent selecting below 1
         if (quantity > product.maxQuantity) quantity = product.maxQuantity; // 👈 Ensure it doesn't exceed the max
-    
+
         setQuantities(prev => ({ ...prev, [product.name]: quantity }));
-    };    
+    };
 
     const sortedProducts = [...products]
         .filter(product => product.visible) // Hide invisible items
@@ -54,13 +54,13 @@ function ProductList({ selectedItems, setSelectedItems, quantities, setQuantitie
             <h2>Items for Sale</h2>
             <ul id="product-list">
                 {sortedProducts.map((product, index) => (
-                    <li 
-                    key={index} 
-                    className={`plant-box ${product.availability}`} 
-                    onClick={() => openModal(product)}
-                    style={{ cursor: product.availability === 'available' ? 'pointer' : 'not-allowed', opacity: product.availability === 'available' ? 1 : 0.6 }}
-                >
-                
+                    <li
+                        key={index}
+                        className={`plant-box ${product.availability}`}
+                        onClick={() => openModal(product)}
+                        style={{ cursor: product.availability === 'available' ? 'pointer' : 'not-allowed', opacity: product.availability === 'available' ? 1 : 0.6 }}
+                    >
+
                         {/* Urgency Banner */}
                         {product.urgencyLevel === 1 && <div className="urgency-banner">1 Left!! 🔥🔥</div>}
                         {product.urgencyLevel === 2 && <div className="urgency-banner">2 Left!! 🔥</div>}
@@ -68,8 +68,8 @@ function ProductList({ selectedItems, setSelectedItems, quantities, setQuantitie
                         {/* Checkbox */}
                         <input
                             type="checkbox"
+                            onClick={(e) => e.stopPropagation()} // Prevent modal from opening
                             onChange={(e) => {
-                                e.stopPropagation(); // Prevent modal opening
                                 toggleSelection(product);
                             }}
                             checked={selectedItems.some(item => item.name === product.name)}
