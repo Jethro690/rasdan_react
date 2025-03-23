@@ -69,9 +69,12 @@ function ProductList({ selectedItems, setSelectedItems, quantities, setQuantitie
                         {/* Product Info */}
                         <h3>{product.name}</h3>
                         <p className={`availability ${product.availability}`}>{product.availability.toUpperCase()}</p>
-                        <a href={product.fullImage} target="_blank" rel="noopener noreferrer">
-                            <img src={product.image} alt={product.name} className="product-image thumbnail" />
-                        </a>
+                        <img
+    src={product.image}
+    alt={product.name}
+    className="product-image thumbnail"
+    onClick={() => openModal(product)} // Clicking the image opens the modal
+/>
                         <p>{product.description}</p>
                         <p>{product.size}</p>
                         <p>{product.price}</p>
