@@ -85,7 +85,6 @@ function ProductList({ selectedItems, setSelectedItems, quantities, setQuantitie
                             className="product-image thumbnail"
                             onClick={() => openModal(product)} // Clicking the image opens the modal
                         />
-                        <p>{product.description}</p>
                         <p>{product.size}</p>
                         <p>{product.price}</p>
                     </li>
