@@ -273,10 +273,23 @@ img {
     /* Consistent background */
     color: #d4bf79;
     /* Gold text */
+    text-align: center;
+}
+
+.basket-boxlet {
+    border: 1px solid #d4bf79;
+    /* Same thin gold border as product items */
+    border-radius: 8px;
+    /* Rounded corners */
+    padding: 10px;
+    background-color: #352412;
+    /* Consistent background */
+    color: #d4bf79;
+    /* Gold text */
     text-align: left;
 }
 
-.info-boxlet ul {
+.basket-boxlet ul {
     padding-left: 0; /* Remove default padding */
     list-style: none; /* Optional: Remove bullet points */
     text-align: left; /* Make sure list items align left */
@@ -293,6 +306,28 @@ img {
     justify-content: center;
     /* Ensures items align in the center */
 }
+
+.total-and-clear {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.clear-basket {
+    background-color: #d4bf79;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.clear-basket:hover {
+    background-color: #cc0000;
+}
+
 
 /* Very Small devices (portrait tablets and large phones, 150px and up) */
 @media only screen and (min-width: 200px) {

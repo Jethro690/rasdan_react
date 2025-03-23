@@ -21,8 +21,10 @@ function App() {
                 setQuantities={setQuantities} // Pass setQuantities to ProductList
             />
             <Order
-                selectedItems={selectedItems}
-                quantities={quantities} // Pass quantities to Order
+                selectedItems={selectedItems} 
+                setSelectedItems={setSelectedItems} 
+                quantities={quantities} 
+                setQuantities={setQuantities}
             />
             <Footer />
         </div>
