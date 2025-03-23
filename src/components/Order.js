@@ -38,7 +38,7 @@ function Order({ selectedItems, quantities }) {
 
     return (
         <section className="order-box">
-            <h2>Selected Items</h2>
+            <h2>Basket</h2>
             {selectedItems.length > 0 ? (
                 <div className='info-boxlet'>
                     <ul>
@@ -54,7 +54,12 @@ function Order({ selectedItems, quantities }) {
             )}
 
             {/* Total Price Display */}
-            <p className="total-price">Total Price: R{calculateTotalPrice()}</p>
+            <p className="total-price">
+                {customerLocation
+                    ? `Total Price + Shipping: R${calculateTotalPrice()}`
+                    : `Total Price: R${calculateTotalPrice()}`
+                }
+            </p>
 
             {/* Location Input */}
             <div className="input-container">

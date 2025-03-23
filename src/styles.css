@@ -273,7 +273,13 @@ img {
     /* Consistent background */
     color: #d4bf79;
     /* Gold text */
-    text-align: center;
+    text-align: left;
+}
+
+.info-boxlet ul {
+    padding-left: 0; /* Remove default padding */
+    list-style: none; /* Optional: Remove bullet points */
+    text-align: left; /* Make sure list items align left */
 }
 
 #info-list {
