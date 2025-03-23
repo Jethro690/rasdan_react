@@ -7,6 +7,7 @@ function ProductList({ selectedItems, setSelectedItems, quantities, setQuantitie
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const openModal = (product) => {
+        if (product.availability !== 'available') return; // 🚫 Prevent opening for unavailable items
         setSelectedProduct(product);
         setIsModalOpen(true);
     };
@@ -53,7 +54,13 @@ function ProductList({ selectedItems, setSelectedItems, quantities, setQuantitie
             <h2>Items for Sale</h2>
             <ul id="product-list">
                 {sortedProducts.map((product, index) => (
-                    <li key={index} className={`plant-box ${product.availability}`} onClick={() => openModal(product)}>
+                    <li 
+                    key={index} 
+                    className={`plant-box ${product.availability}`} 
+                    onClick={() => openModal(product)}
+                    style={{ cursor: product.availability === 'available' ? 'pointer' : 'not-allowed', opacity: product.availability === 'available' ? 1 : 0.6 }}
+                >
+                
                         {/* Urgency Banner */}
                         {product.urgencyLevel === 1 && <div className="urgency-banner">1 Left!! 🔥🔥</div>}
                         {product.urgencyLevel === 2 && <div className="urgency-banner">2 Left!! 🔥</div>}
