@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Order({ selectedItems, quantities }) {
+function Order({ selectedItems, setSelectedItems, quantities, setQuantities }) {
     const [customerLocation, setCustomerLocation] = useState('');
     const PUDO_COST = 109; // Set the PUDO shipping cost
 
@@ -8,14 +8,13 @@ function Order({ selectedItems, quantities }) {
         setCustomerLocation(event.target.value);
     };
 
-    // Function to calculate total price of selected items with quantities
     const calculateTotalPrice = () => {
         const total = selectedItems.reduce((sum, item) => {
             const quantity = quantities[item.name] || 1;
             return sum + (parseFloat(item.price.replace('R', '')) * quantity);
         }, 0);
 
-        return total + (customerLocation ? PUDO_COST : 0); // Add PUDO cost if location is entered
+        return total + (customerLocation ? PUDO_COST : 0);
     };
 
     const formatWhatsAppMessage = () => {
@@ -36,11 +35,18 @@ function Order({ selectedItems, quantities }) {
 
     const whatsappLink = `https://wa.me/27643201946?text=${encodeURIComponent(formatWhatsAppMessage())}`;
 
+    // Clear the selection list and reset the location
+    const clearBasket = () => {
+        setSelectedItems([]);
+        setQuantities({});
+        setCustomerLocation('');
+    };
+
     return (
         <section className="order-box">
             <h2>Basket</h2>
             {selectedItems.length > 0 ? (
-                <div className='info-boxlet'>
+                <div className='basket-boxlet'>
                     <ul>
                         {selectedItems.map((item, index) => (
                             <li key={index}>
@@ -50,16 +56,17 @@ function Order({ selectedItems, quantities }) {
                     </ul>
                 </div>
             ) : (
-                <div className='info-boxlet'>No items selected*</div>
+                <div className='basket-boxlet'>No items selected*</div>
             )}
 
-            {/* Total Price Display */}
-            <p className="total-price">
-                {customerLocation
-                    ? `Total Price + Shipping: R${calculateTotalPrice()}`
-                    : `Total Price: R${calculateTotalPrice()}`
-                }
-            </p>
+            {/* Total Price and Clear Basket Button */}
+            <div className="total-and-clear">
+                <p className="total-price">
+                    {customerLocation ? "Total Price + Shipping: " : "Total Price: "} 
+                    R{calculateTotalPrice()}
+                </p>
+                <button className="clear-basket" onClick={clearBasket}>🗑️</button>
+            </div>
 
             {/* Location Input */}
             <div className="input-container">

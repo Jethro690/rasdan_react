@@ -22,7 +22,7 @@ function Footer() {
                         padding: 0
                     }}
                 >
-                    Return to Top ⬆️
+                    Return to Top
                 </button>
             </p>
         </footer>

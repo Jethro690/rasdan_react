@@ -20,7 +20,7 @@ const products = [
         price: 'R 120',
         availability: 'unavailable',
         urgencyLevel: 0,
-        visible: true,
+        visible: false,
         maxQuantity: 3
     },
     {
@@ -56,7 +56,7 @@ const products = [
         price: 'R 120',
         availability: 'unavailable',
         urgencyLevel: 0,
-        visible: true,
+        visible: false,
         maxQuantity: 3
     },
     {
@@ -116,7 +116,7 @@ const products = [
         price: 'R 400',
         availability: 'unavailable',
         urgencyLevel: 2,
-        visible: true,
+        visible: false,
         maxQuantity: 2
     },
     {
@@ -128,7 +128,7 @@ const products = [
         price: 'R 200',
         availability: 'unavailable',
         urgencyLevel: 2,
-        visible: true,
+        visible: false,
         maxQuantity: 2
     },
     {
@@ -152,7 +152,7 @@ const products = [
         price: 'R 40',
         availability: 'available',
         urgencyLevel: 0,
-        visible: true,
+        visible: false,
         maxQuantity: 3
     },
     {
@@ -164,7 +164,7 @@ const products = [
         price: 'R 160',
         availability: 'unavailable',
         urgencyLevel: 0,
-        visible: true,
+        visible: false,
         maxQuantity: 3
     },
     {
@@ -176,7 +176,7 @@ const products = [
         price: 'R 600',
         availability: 'unavailable',
         urgencyLevel: 1,
-        visible: true,
+        visible: false,
         maxQuantity: 1
     },
     {
@@ -188,7 +188,7 @@ const products = [
         price: 'R 30',
         availability: 'available',
         urgencyLevel: 0,
-        visible: true,
+        visible: false,
         maxQuantity: 3
     },
     // Add other products here...
