@@ -40,10 +40,19 @@ function ProductList({ selectedItems, setSelectedItems, quantities, setQuantitie
 
     const updateQuantity = (product, quantity) => {
         if (quantity < 1) return; // Prevent selecting below 1
-        if (quantity > product.maxQuantity) quantity = product.maxQuantity; // 👈 Ensure it doesn't exceed the max
-
+        if (quantity > product.maxQuantity) quantity = product.maxQuantity; // Ensure it doesn't exceed max
+    
         setQuantities(prev => ({ ...prev, [product.name]: quantity }));
-    };
+    
+        // ✅ Ensure item is selected when quantity changes
+        setSelectedItems(prevItems => {
+            const isAlreadySelected = prevItems.some(item => item.name === product.name);
+            if (!isAlreadySelected && quantity > 0) {
+                return [...prevItems, product]; // Add product if not already selected
+            }
+            return prevItems; // Otherwise, leave it as is
+        });
+    };    
 
     const sortedProducts = [...products]
         .filter(product => product.visible) // Hide invisible items
