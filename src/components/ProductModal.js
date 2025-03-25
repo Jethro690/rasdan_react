@@ -32,12 +32,13 @@ function ProductModal({ product, isOpen, onClose, toggleSelection, quantities, s
                                 value={quantities[product.name] || 1} // Default to 1
                                 onChange={(e) => {
                                     let value = parseInt(e.target.value, 10);
-                                    if (value > product.maxQuantity) value = product.maxQuantity; // 👈 Prevent exceeding maxQuantity
-                                    if (value < 1) value = 1; // 👈 Prevent selecting less than 1
-                                    setQuantity(product, value);
+                                    if (value > product.maxQuantity) value = product.maxQuantity; // Prevent exceeding max
+                                    if (value < 1) value = 1; // Prevent selecting less than 1
+
+                                    setQuantity(product, value); // ✅ Update quantity without affecting selection
                                 }}
                                 min="1"
-                                max={product.maxQuantity} // 👈 Set max value in input
+                                max={product.maxQuantity}
                             />
                         </div>
 
